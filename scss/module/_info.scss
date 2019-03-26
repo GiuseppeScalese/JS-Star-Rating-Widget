@@ -1,0 +1,165 @@
+//global style for programme component
+
+.info{
+    padding: 20px 40px 40px;
+    background: $bg-color--very-dark-blue;
+    @extend %clearfix; 
+
+    &__times, &__summary{
+        float: left;
+    }
+
+    &__heading{
+        margin-bottom: 5px;
+    }
+
+    &__preview{
+        float: left;
+        padding-right: 15px;
+
+        .preview-img{
+            width: 170px;
+        }
+    }
+
+    &__summary{
+        border-right: 1px solid $preview-separator-color;
+        width: 80%;
+        padding-bottom: 15px;
+
+        .summary-headline{
+            @include font-size(18px);
+            color: $secondary-heading-colour;
+            margin-bottom: 5px;
+        }
+
+        .date{
+            @include font-size($text-size--x-small);
+        }
+
+        .desc{
+            padding-top: 10px;
+            color:$primary-color;
+            margin-right: 25px;
+        }
+    }
+
+    &__times{
+        padding-left: 10px;
+        @include font-size($text-size--x-small);
+        color: $white-colour;
+
+        .time{
+            display: block;
+            padding-bottom: 20px;       
+        }
+
+        .days-left{
+            &--warning{
+                color: $warning-icon-color;
+            }
+        }
+    }
+
+     &--more, &--others{
+        background: $bg-color--super-light-grey;
+        padding-left: 0;
+        padding-bottom: 20px;
+
+        .info__summary{
+            padding-bottom: 0;
+
+            .date{
+                color: $bg-color--mild-blue;
+            }
+        }
+
+        .info__times{
+            color: $bg-color--mild-blue;
+        }
+     }
+
+    &--more{
+          
+        .info__summary{
+            width: 60%;
+            border-right: 1px solid $main-content-separator-color;
+        }
+
+    } 
+
+    &--others, &--other-alternative{
+        position: relative;
+        overflow: auto;
+        padding: 0;
+        margin-bottom: 15px;
+        
+        &:after{
+            background: url(../img/ribbon-icon.jpg) no-repeat center;
+            display: inline-block;
+            content: "";
+            padding-right: 29px;
+            padding-left: 8px;
+            width: 0px;
+            height: 36px;
+            margin-left: 16px;
+            position: absolute;
+            bottom: 0px;
+            right: 0px;
+            cursor:pointer;
+        }
+
+        .info__summary{
+           border-bottom: 1px solid $main-content-separator-color; 
+           border-right: 0;
+           padding-top: 8px;
+        }
+
+        .info__summary, .info__times{
+            width: 67%;
+             
+        }
+
+        .info__times{
+            padding-left: 0;
+            padding-top: 10px;
+
+            .date{
+                display: inline;
+            }
+
+            .time, .days-left{
+                float: right;
+            }
+
+            .days-left{
+                padding-left: 10px;
+            }
+
+        }
+
+    }
+
+    &--other-alternative{
+        background: $bg-color--super-light-grey;
+
+        .info__times{
+            color: $bg-color--mild-blue;
+            width: 67%;
+        }
+
+        .info__summary{
+           padding-bottom: 0;
+        }
+
+        .info__preview{
+
+            .info__date{
+                color: $bg-color--mild-blue;
+                @include font-size($text-size--x-small);
+                padding-top:10px;
+            }
+        }
+    }
+}
+

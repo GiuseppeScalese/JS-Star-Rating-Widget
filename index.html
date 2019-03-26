@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Rating App</title>
+
+<!--[if lt IE 9]>
+<script src="http://html5shiv.googlecode.com/svn/trunk/html5.js">
+</script>
+<![endif]-->
+
+<!-- Internet Explorer 8 or older versions doesn't support CSS3 media queries. I enable it by importing css3-mediaqueries.js Javascript file. -->
+<!--[if lt IE 9]>
+    <script src="http://css3-mediaqueries-js.googlecode.com/svn/trunk/css3-mediaqueries.js"></script>
+<![endif]-->  
+
+<!-- importing custom css -->
+<link rel="stylesheet" href="./css/style.css"/>
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.5.0/css/font-awesome.min.css">
+
+</head> 
+<body>
+  <div id="wrapper">
+    <form id="ratingsForm" action="/someaction">
+      <div class="rating-box">
+        <div class="rating-box__message">
+        Rate it!</div>
+          <div class="rating-box__stars">
+            <input type="radio" data-rate-desc="Love it!" id="star5" name="rate" value="5" />
+            <label for="star5" title="Love this item!"></label>
+            <input type="radio" data-rate-desc="Very good!" id="star4" name="rate" value="4" />
+            <label for="star4" title="Very good item!"></label>
+            <input type="radio" data-rate-desc="Good" id="star3" name="rate" value="3" />
+            <label for="star3" title="Good item"></label>
+            <input type="radio" data-rate-desc="Don't like it" id="star2" name="rate" value="2" />
+            <label for="star2" title="Don't like this item"></label>
+            <input type="radio" data-rate-desc="Poor" id="star1" name="rate" value="1" />
+            <label for="star1" title="Poor item"></label>
+          </div>
+     </div>
+   </form>
+  </div>
+
+  <!-- importing jquery library -->
+  <script src="./js/jquery-1.11.2.min.js" ></script>
+
+  <!-- importing custom script file -->
+  <script src="./js/function.js" ></script> 
+</body>
+</html>
+
+

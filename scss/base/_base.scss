@@ -1,0 +1,62 @@
+@include font-face($custom-font-one, "../fonts", $custom-font-one);
+@include font-face($custom-font-two, "../fonts", $custom-font-two);
+
+body{
+  color:$primary-color;
+  background: $bg-color--white;
+  font-family: FSAlbertWeb-Regular, $base-font-family;
+} 
+
+.content {
+	margin:0 auto;
+	text-align:left;
+	width:80%;
+	max-width: 960px;
+	background:$bg-color--white;
+
+	@include phone{
+		width: 100%;
+		padding: 10px;
+	}
+
+	@include deskop_tablets{
+		width: 95%;
+	}
+}
+.clear {
+	display:block;
+	float:none;
+	clear:both;
+	
+}
+#instructions {
+	padding: 20px;
+	margin: 20px 0;
+
+	@include phone{
+		padding: 0;
+	}
+
+	@include deskop_tablets{
+		padding: 15px;
+	}
+
+	.main-heading{
+		margin-left: 5px;
+	}
+}
+
+.js{
+	#carousel{
+		.controls{
+			display: block;
+		}
+	}
+}
+
+.no-js {
+	text-align: center;
+	padding: 20px;
+	@include font-size($text-size--medium);
+	color:$warning-message-color;
+}
